@@ -1,0 +1,91 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Container from '../components/container.astro';
+import { Image } from 'astro:assets';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header />
+		<Container>
+			<section class="bg-gray-50 py-20">
+				<div class="container mx-auto px-6 text-center">
+				  <h1 class="text-4xl md:text-6xl font-bold mb-4 text-gray-900">Grow Your Startup with Expert Guidance</h1>
+				  <p class="text-xl mb-8 text-gray-600">Our business incubation platform provides the tools, mentorship, and resources you need to succeed.</p>
+				  <a href="#" class="bg-blue-500 text-white px-8 py-3 rounded-md text-lg font-semibold hover:bg-blue-600 transition duration-300">Start Your Journey</a>
+				</div>
+			  </section>
+		  
+			  <section id="features" class="py-20">
+				<div class="container mx-auto px-6">
+				  <h2 class="text-3xl font-bold text-center mb-8">Why Choose Our Incubator?</h2>
+				  <div class="grid md:grid-cols-3 gap-8">
+					<div class="text-center">
+					  <div class="bg-blue-100 rounded-full p-3 inline-block mb-4">
+						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6 text-blue-500">
+						  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+						</svg>
+					  </div>
+					  <h3 class="text-xl font-semibold mb-2">Expert Mentorship</h3>
+					  <p class="text-gray-600">Get guidance from industry veterans who have been there and done that.</p>
+					</div>
+					<div class="text-center">
+					  <div class="bg-green-100 rounded-full p-3 inline-block mb-4">
+						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6 text-green-500">
+						  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+						</svg>
+					  </div>
+					  <h3 class="text-xl font-semibold mb-2">Workspace & Resources</h3>
+					  <p class="text-gray-600">Access state-of-the-art facilities and tools to boost your productivity.</p>
+					</div>
+					<div class="text-center">
+					  <div class="bg-purple-100 rounded-full p-3 inline-block mb-4">
+						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6 text-purple-500">
+						  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+						</svg>
+					  </div>
+					  <h3 class="text-xl font-semibold mb-2">Networking Opportunities</h3>
+					  <p class="text-gray-600">Connect with fellow entrepreneurs and potential investors.</p>
+					</div>
+				  </div>
+				</div>
+			  </section>
+		  
+			  <section id="testimonials" class="bg-gray-50 py-20">
+				<div class="container mx-auto px-6">
+				  <h2 class="text-3xl font-bold text-center mb-8">What Our Startups Say</h2>
+				  <div class="grid md:grid-cols-2 gap-8">
+					<div class="bg-white p-6 rounded-lg shadow-md">
+					  <p class="text-gray-600 mb-4">"The mentorship and resources provided by BusinessIncubator were instrumental in our success. We couldn't have grown this fast without their support."</p>
+					  <div class="flex items-center">
+						<Image src="/person.svg?height=40&width=40" alt="Jane Doe" width={40} height={40} class="rounded-full mr-4" />
+						<div>
+						  <div class="font-semibold">Jane Doe</div>
+						  <div class="text-sm text-gray-500">CEO, TechStart</div>
+						</div>
+					  </div>
+					</div>
+					<div class="bg-white p-6 rounded-lg shadow-md">
+					  <p class="text-gray-600 mb-4">"The networking opportunities alone made joining BusinessIncubator worth it. We found our first major client through one of their events."</p>
+					  <div class="flex items-center">
+						<Image src="/person.svg?height=40&width=40" alt="John Smith" width={40} height={40} class="rounded-full mr-4" />
+						<div>
+						  <div class="font-semibold">John Smith</div>
+						  <div class="text-sm text-gray-500">Founder, InnovateCo</div>
+						</div>
+					  </div>
+					</div>
+				  </div>
+				</div>
+			  </section>
+		</Container>
+		<Footer />
+	</body>
+</html>
