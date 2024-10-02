@@ -5,31 +5,31 @@ import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
 const menuitems = [
   {
     title: "Home",
-    path: "/",
+    path: Astro.site+"/",
   },
   {
     title: "About",
-    path: "/about",
+    path: Astro.site+"/about",
   },
   {
     title: "Events",
-    path: "/events",
+    path: Astro.site+"/events",
   },
   {
     title: "Skill Development",
-    path: "/careers",
+    path: Astro.site+"/careers",
   },
   {
     title: "Incubation",
-    path: "/startups",
+    path: Astro.site+"/startups",
   },
   {
     title: "Resources",
-    path: "/resources",
+    path: Astro.site+"/resources",
   },
   {
     title: "Community",
-    path: "/community",
+    path: Astro.site+"/community",
   },
 ];
 ---
@@ -38,9 +38,9 @@ const menuitems = [
   <header class="flex flex-col lg:flex-row justify-between items-center my-5">
     <Astronav >
       <div class="flex w-full xl:w-auto items-center justify-between">
-        <a href="/" class="text-lg">
+        <a href={Astro.site} class="text-lg">
           <img
-            src="/logo/logo.png"
+            src={`${Astro.site}/logo/logo.png"`}
             class="h-14 w-14 md:h-18 md:w-18"
           />
 
