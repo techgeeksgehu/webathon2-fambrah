@@ -1,35 +1,35 @@
 ---
 import Container from "./container.astro";
 import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
-
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const menuitems = [
   {
     title: "Home",
-    path: Astro.site+"/",
+    path: canonicalURL+"/",
   },
   {
     title: "About",
-    path: Astro.site+"/about",
+    path: canonicalURL+"/about",
   },
   {
     title: "Events",
-    path: Astro.site+"/events",
+    path: canonicalURL+"/events",
   },
   {
     title: "Skill Development",
-    path: Astro.site+"/careers",
+    path: canonicalURL+"/careers",
   },
   {
     title: "Incubation",
-    path: Astro.site+"/startups",
+    path: canonicalURL+"/startups",
   },
   {
     title: "Resources",
-    path: Astro.site+"/resources",
+    path: canonicalURL+"/resources",
   },
   {
     title: "Community",
-    path: Astro.site+"/community",
+    path: canonicalURL+"/community",
   },
 ];
 ---
@@ -38,9 +38,9 @@ const menuitems = [
   <header class="flex flex-col lg:flex-row justify-between items-center my-5">
     <Astronav >
       <div class="flex w-full xl:w-auto items-center justify-between">
-        <a href={Astro.site} class="text-lg">
+        <a href={canonicalURL} class="text-lg">
           <img
-            src={`${Astro.site}/logo/logo.png`}
+            src={`${canonicalURL}/logo/logo.png`}
             class="h-14 w-14 md:h-18 md:w-18"
           />
 
