@@ -8,6 +8,8 @@ import tailwind from '@astrojs/tailwind';
 
 // https://astro.build/config
 export default defineConfig({
-    site: 'https://techgeeks.github.io/webathon2-fambrah',
+    site: 'https://techgeeks.github.io',
+    base: '/webathon2-fambrah',
+    trailingSlash: "never",
     integrations: [mdx(), sitemap(), tailwind()],
 });

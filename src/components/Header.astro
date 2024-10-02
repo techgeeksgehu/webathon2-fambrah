@@ -1,34 +1,37 @@
 ---
 import Container from "./container.astro";
 import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
+
+var base = import.meta.env.BASE_URL
+
 const menuitems = [
   {
     title: "Home",
-    path: Astro.site+"/",
+    path: base+"/",
   },
   {
     title: "About",
-    path: Astro.site+"/about",
+    path: base+"/about",
   },
   {
     title: "Events",
-    path: Astro.site+"/events",
+    path: base+"/events",
   },
   {
     title: "Skill Development",
-    path: Astro.site+"/careers",
+    path: base+"/careers",
   },
   {
     title: "Incubation",
-    path: Astro.site+"/startups",
+    path: base+"/startups",
   },
   {
     title: "Resources",
-    path: Astro.site+"/resources",
+    path: base+"/resources",
   },
   {
     title: "Community",
-    path: Astro.site+"/community",
+    path: base+"/community",
   },
 ];
 ---
@@ -37,9 +40,9 @@ const menuitems = [
   <header class="flex flex-col lg:flex-row justify-between items-center my-5">
     <Astronav >
       <div class="flex w-full xl:w-auto items-center justify-between">
-        <a href={Astro.site} class="text-lg">
+        <a href={base} class="text-lg">
           <img
-            src={`${Astro.site}/logo/logo.png`}
+            src={`${base}/logo/logo.png`}
             class="h-14 w-14 md:h-18 md:w-18"
           />
 
